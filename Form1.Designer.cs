@@ -32,18 +32,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtLegajo = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.cmbMaterias = new System.Windows.Forms.ComboBox();
+            this.grdMaterias_x_Alumno = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.codigo_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterias_x_Alumno)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,124 +82,134 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Materias";
             // 
-            // textBox1
+            // txtLegajo
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtLegajo.Location = new System.Drawing.Point(101, 47);
+            this.txtLegajo.Name = "txtLegajo";
+            this.txtLegajo.Size = new System.Drawing.Size(214, 22);
+            this.txtLegajo.TabIndex = 1;
+            this.txtLegajo.Text = "84646";
             // 
-            // textBox2
+            // txtApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtApellido.Location = new System.Drawing.Point(101, 85);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(343, 22);
+            this.txtApellido.TabIndex = 3;
             // 
-            // textBox3
+            // txtNombres
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(326, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtNombres.Location = new System.Drawing.Point(101, 123);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(343, 22);
+            this.txtNombres.TabIndex = 4;
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.Location = new System.Drawing.Point(331, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(331, 46);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(113, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // comboBox1
+            // cmbMaterias
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(326, 24);
-            this.comboBox1.TabIndex = 5;
+            this.cmbMaterias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaterias.FormattingEnabled = true;
+            this.cmbMaterias.Location = new System.Drawing.Point(101, 155);
+            this.cmbMaterias.Name = "cmbMaterias";
+            this.cmbMaterias.Size = new System.Drawing.Size(343, 24);
+            this.cmbMaterias.TabIndex = 5;
             // 
-            // dataGridView1
+            // grdMaterias_x_Alumno
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdMaterias_x_Alumno.AllowUserToAddRows = false;
+            this.grdMaterias_x_Alumno.AllowUserToDeleteRows = false;
+            this.grdMaterias_x_Alumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdMaterias_x_Alumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo_materia,
             this.nombre_materia});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 203);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(418, 194);
-            this.dataGridView1.TabIndex = 10;
+            this.grdMaterias_x_Alumno.Location = new System.Drawing.Point(26, 203);
+            this.grdMaterias_x_Alumno.Name = "grdMaterias_x_Alumno";
+            this.grdMaterias_x_Alumno.ReadOnly = true;
+            this.grdMaterias_x_Alumno.RowHeadersWidth = 51;
+            this.grdMaterias_x_Alumno.RowTemplate.Height = 24;
+            this.grdMaterias_x_Alumno.Size = new System.Drawing.Size(418, 194);
+            this.grdMaterias_x_Alumno.TabIndex = 10;
             // 
-            // button2
+            // btnSalir
             // 
-            this.button2.Location = new System.Drawing.Point(331, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(331, 415);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(113, 23);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button3
+            // btnNuevo
             // 
-            this.button3.Location = new System.Drawing.Point(26, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Nuevo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(26, 415);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(113, 23);
+            this.btnNuevo.TabIndex = 8;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // button4
+            // btnGrabar
             // 
-            this.button4.Location = new System.Drawing.Point(145, 415);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Grabar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGrabar.Location = new System.Drawing.Point(145, 415);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(113, 23);
+            this.btnGrabar.TabIndex = 6;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // codigo_materia
             // 
-            this.codigo_materia.HeaderText = "Codigo Materia";
+            this.codigo_materia.DataPropertyName = "Código Materia";
+            this.codigo_materia.HeaderText = "Código Materia";
             this.codigo_materia.MinimumWidth = 6;
             this.codigo_materia.Name = "codigo_materia";
             this.codigo_materia.ReadOnly = true;
-            this.codigo_materia.Width = 127;
+            this.codigo_materia.Width = 60;
             // 
             // nombre_materia
             // 
+            this.nombre_materia.DataPropertyName = "Nombre Materia";
             this.nombre_materia.HeaderText = "Nombre Materia";
             this.nombre_materia.MinimumWidth = 6;
             this.nombre_materia.Name = "nombre_materia";
             this.nombre_materia.ReadOnly = true;
-            this.nombre_materia.Width = 134;
+            this.nombre_materia.Width = 200;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.grdMaterias_x_Alumno);
+            this.Controls.Add(this.cmbMaterias);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTA DE MATERIAS POR ALUMNO";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterias_x_Alumno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,15 +221,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtLegajo;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox cmbMaterias;
+        private System.Windows.Forms.DataGridView grdMaterias_x_Alumno;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_materia;
     }
