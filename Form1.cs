@@ -54,11 +54,11 @@ namespace simulacroPAV
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Alumno al = buscarEstudiante(txtLegajo.Text);
-            if (al.Nombre != null)
+            Alumnos al = buscarEstudiante(txtLegajo.Text);
+            if (al.Nombres != null)
             {
                 txtApellido.Text = al.Apellido;
-                txtNombres.Text = al.Nombre;
+                txtNombres.Text = al.Nombres;
                 cargarGrilla(al.Legajo);
             }
             else
@@ -69,12 +69,12 @@ namespace simulacroPAV
             }
         }
 
-        private Alumno buscarEstudiante(string legajo)
+        private Alumnos buscarEstudiante(string legajo)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection con = new SqlConnection(cadenaConexion);
 
-            Alumno al = new Alumno();
+            Alumnos al = new Alumnos();
             SqlCommand cmd = new SqlCommand();
             try
             {
@@ -91,7 +91,7 @@ namespace simulacroPAV
                 {
                     al.Legajo = int.Parse(dr["legajo"].ToString());
                     al.Apellido = dr["apellido"].ToString();
-                    al.Nombre = dr["nombres"].ToString();
+                    al.Nombres = dr["nombres"].ToString();
                 }
             }
             catch (Exception) { return al; }
@@ -248,6 +248,33 @@ namespace simulacroPAV
             blanquearCampos();
             txtLegajo.Text = "";
             txtLegajo.Focus();
+        }
+
+
+        private bool VerificarAlumnoMateria()
+        {
+            foreach (DataGridViewRow fila in grdMaterias_x_Alumno.Rows)
+            {
+                if (fila.Cells["codigo_materia"].Value.ToString().Equals(cmbMaterias.SelectedValue.ToString()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void btnTransaccion_Click(object sender, EventArgs e)
+        {
+            Form2 ventana = new Form2(this);
+            Hide();
+            ventana.Show();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Form4 ventana = new Form4(this);
+            Hide();
+            ventana.Show();
         }
     }
 }

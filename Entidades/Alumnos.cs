@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace simulacroPAV.Entidades
 {
-    public class Alumno
+    public class Alumnos
     {
         private int legajo;
         private string apellido;
-        private string nombre;
+        private string nombres;
 
-        public Alumno()
+        public Alumnos()
         {
             
         }
 
-        public Alumno(int legajo, string apellido, string nombre)
+        public Alumnos(int legajo, string apellido, string nombre)
         {
             this.legajo = legajo;
             this.apellido = apellido;
-            this.nombre = nombre;
+            this.nombres = nombre;
         }
 
         public int Legajo
@@ -36,10 +36,10 @@ namespace simulacroPAV.Entidades
             set => apellido = value;
         }
 
-        public string Nombre
+        public string Nombres
         {
-            get => nombre;
-            set => nombre = value;
+            get => nombres;
+            set => nombres = value;
         }
     }
 }

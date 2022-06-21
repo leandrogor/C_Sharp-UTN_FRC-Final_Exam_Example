@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="simulacroPAVConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="simulacroPAVConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.simulacroPAV.Properties.Settings.GlobalReference.Default.simulacroPAVConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="materias_x_alumnosTableAdapter" GeneratorDataComponentClassName="materias_x_alumnosTableAdapter" Name="materias_x_alumnos" UserDataComponentName="materias_x_alumnosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="simulacroPAVConnectionString (Settings)" DbObjectName="simulacroPAV.dbo.materias_x_alumnos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select codigo_materia, nombre_materia, count(*) cantidad from materias_x_alumnos group by codigo_materia, nombre_materia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo_materia" DataSetColumn="codigo_materia" />
+              <Mapping SourceColumn="nombre_materia" DataSetColumn="nombre_materia" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="materias_x_alumnos" msprop:Generator_RowEvHandlerName="materias_x_alumnosRowChangeEventHandler" msprop:Generator_RowDeletedName="materias_x_alumnosRowDeleted" msprop:Generator_RowDeletingName="materias_x_alumnosRowDeleting" msprop:Generator_RowEvArgName="materias_x_alumnosRowChangeEvent" msprop:Generator_TablePropName="materias_x_alumnos" msprop:Generator_RowChangedName="materias_x_alumnosRowChanged" msprop:Generator_RowChangingName="materias_x_alumnosRowChanging" msprop:Generator_TableClassName="materias_x_alumnosDataTable" msprop:Generator_RowClassName="materias_x_alumnosRow" msprop:Generator_TableVarName="tablematerias_x_alumnos" msprop:Generator_UserTableName="materias_x_alumnos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo_materia" msprop:Generator_ColumnPropNameInRow="codigo_materia" msprop:Generator_ColumnPropNameInTable="codigo_materiaColumn" msprop:Generator_ColumnVarNameInTable="columncodigo_materia" msprop:Generator_UserColumnName="codigo_materia" type="xs:int" />
+              <xs:element name="nombre_materia" msprop:Generator_ColumnPropNameInRow="nombre_materia" msprop:Generator_ColumnPropNameInTable="nombre_materiaColumn" msprop:Generator_ColumnVarNameInTable="columnnombre_materia" msprop:Generator_UserColumnName="nombre_materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

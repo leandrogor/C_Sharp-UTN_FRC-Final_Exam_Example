@@ -38,11 +38,13 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.cmbMaterias = new System.Windows.Forms.ComboBox();
             this.grdMaterias_x_Alumno = new System.Windows.Forms.DataGridView();
+            this.codigo_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.codigo_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTransaccion = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterias_x_Alumno)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +141,24 @@
             this.grdMaterias_x_Alumno.Size = new System.Drawing.Size(418, 194);
             this.grdMaterias_x_Alumno.TabIndex = 10;
             // 
+            // codigo_materia
+            // 
+            this.codigo_materia.DataPropertyName = "Código Materia";
+            this.codigo_materia.HeaderText = "Código Materia";
+            this.codigo_materia.MinimumWidth = 6;
+            this.codigo_materia.Name = "codigo_materia";
+            this.codigo_materia.ReadOnly = true;
+            this.codigo_materia.Width = 60;
+            // 
+            // nombre_materia
+            // 
+            this.nombre_materia.DataPropertyName = "Nombre Materia";
+            this.nombre_materia.HeaderText = "Nombre Materia";
+            this.nombre_materia.MinimumWidth = 6;
+            this.nombre_materia.Name = "nombre_materia";
+            this.nombre_materia.ReadOnly = true;
+            this.nombre_materia.Width = 200;
+            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(331, 415);
@@ -169,29 +189,33 @@
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
-            // codigo_materia
+            // btnTransaccion
             // 
-            this.codigo_materia.DataPropertyName = "Código Materia";
-            this.codigo_materia.HeaderText = "Código Materia";
-            this.codigo_materia.MinimumWidth = 6;
-            this.codigo_materia.Name = "codigo_materia";
-            this.codigo_materia.ReadOnly = true;
-            this.codigo_materia.Width = 60;
+            this.btnTransaccion.Location = new System.Drawing.Point(202, 12);
+            this.btnTransaccion.Name = "btnTransaccion";
+            this.btnTransaccion.Size = new System.Drawing.Size(113, 23);
+            this.btnTransaccion.TabIndex = 11;
+            this.btnTransaccion.Text = "Transaccion";
+            this.btnTransaccion.UseVisualStyleBackColor = true;
+            this.btnTransaccion.Click += new System.EventHandler(this.btnTransaccion_Click);
             // 
-            // nombre_materia
+            // btnReporte
             // 
-            this.nombre_materia.DataPropertyName = "Nombre Materia";
-            this.nombre_materia.HeaderText = "Nombre Materia";
-            this.nombre_materia.MinimumWidth = 6;
-            this.nombre_materia.Name = "nombre_materia";
-            this.nombre_materia.ReadOnly = true;
-            this.nombre_materia.Width = 200;
+            this.btnReporte.Location = new System.Drawing.Point(331, 12);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(113, 23);
+            this.btnReporte.TabIndex = 12;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 450);
+            this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.btnTransaccion);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnSalir);
@@ -205,6 +229,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTA DE MATERIAS POR ALUMNO";
@@ -232,6 +257,8 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo_materia;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_materia;
+        private System.Windows.Forms.Button btnTransaccion;
+        private System.Windows.Forms.Button btnReporte;
     }
 }
 
