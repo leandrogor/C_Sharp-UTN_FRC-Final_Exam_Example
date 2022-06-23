@@ -62,7 +62,7 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(343, 22);
             this.txtNombres.TabIndex = 3;
-            this.txtNombres.Text = "Leandro Gabriel";
+            this.txtNombres.Text = "Leandro Gabriell";
             // 
             // txtApellido
             // 
@@ -70,7 +70,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(343, 22);
             this.txtApellido.TabIndex = 2;
-            this.txtApellido.Text = "Gor";
+            this.txtApellido.Text = "Gos";
             // 
             // label3
             // 
@@ -106,7 +106,7 @@
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(207, 22);
             this.txtLegajo.TabIndex = 1;
-            this.txtLegajo.Text = "85920";
+            this.txtLegajo.Text = "85922";
             // 
             // dgvAlumnos
             // 
@@ -173,11 +173,11 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(203, 320);
+            this.btnCancelar.Location = new System.Drawing.Point(180, 320);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(113, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(136, 23);
             this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Cancelar / Volver";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 

@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 401);
+            this.ClientSize = new System.Drawing.Size(500, 378);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.grdMaterias_x_Alumno);
             this.Controls.Add(this.cmbMaterias);

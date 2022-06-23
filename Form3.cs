@@ -35,6 +35,7 @@ namespace simulacroPAV
         private void Form3_Load(object sender, EventArgs e)
         {
             CargarComboMaterias();
+            cmbMaterias.SelectedIndex = 0;
         }
 
         private void CargarComboMaterias()

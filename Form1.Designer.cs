@@ -90,7 +90,7 @@
             this.txtLegajo.Name = "txtLegajo";
             this.txtLegajo.Size = new System.Drawing.Size(214, 22);
             this.txtLegajo.TabIndex = 1;
-            this.txtLegajo.Text = "84646";
+            this.txtLegajo.Text = "85920";
             // 
             // txtApellido
             // 
